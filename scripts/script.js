@@ -1,17 +1,20 @@
-console.log("hi");
-
-const slide = document.querySelector('section:nth-of-type(2) li');
+// CONSTANTEN
+const slides = document.querySelectorAll('section:nth-of-type(2) li');
 const previousButton = document.querySelector('section:nth-of-type(2) button:nth-of-type(1)');
 const nextButton = document.querySelector('section:nth-of-type(2) button:nth-of-type(2)');
-let currentSlide = 0;
-let index = 0;
 
+// VARIABELEN
+let currentSlide = 0;
+let totalSlides = slides.length;
+
+// CAROUSEL SLIDE SHOW
+// CHATGPT >> vraag: ik wil een carousel maken waarbij je naar het volgende en vorige plaatje kunt gaan door te klikken op een button.
 function slideShow(index) {
     // Verander het indexnummer om ervoor te zorgen dat we binnen de grenzen blijven
-    if (index >= slide.length) {
+    if (index >= totalSlides) {
       currentSlide = 0; // Ga terug naar de eerste afbeelding
     } else if (index < 0) {
-      currentSlide = slide.length - 1; // Ga naar de laatste afbeelding
+      currentSlide = slides.length - 1; // Ga naar de laatste afbeelding
     } else {
       currentSlide = index;
     }
