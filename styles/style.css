@@ -28,19 +28,29 @@
 }
 
 @font-face {
-    font-family: 'Suisse BP';
-    src: url(../fonts/Suisse-BP.woff2);
+    font-family: 'Suisse BP regular';
+    src: url(../fonts/Suisse-BP-regular.woff2);
 }
 
 @font-face {
-    font-family: 'RCA Two';
+    font-family: 'Suisse BP light';
+    src: url(../fonts/Suisse-BP-light.woff2);
+}
+
+@font-face {
+    font-family: 'Panama';
     src: url(../fonts/Panama.woff2);
+}
+
+@font-face {
+    font-family: 'CompactaStd bold';
+    src: url(../fonts/CompactaStd-Bold.woff2);
 }
 
 body {
 	background-color: var(--color-background);
 	color: var(--color-text);
-	font-family: 'Suisse BP', 'Helvetica Neue', 'Arial', sans-serif;
+	font-family: 'Suisse BP regular', 'Helvetica Neue', 'Arial', sans-serif;
     
     margin: 0;
 }
@@ -48,7 +58,7 @@ body {
 h1 {
     /* z-index: 10; */
     position: absolute;
-    font-family: "RCA Two", serif;
+    font-family: 'Romie Italic', serif;
     font-size: 3em;
     text-transform: uppercase;
     margin: 0;
@@ -146,9 +156,55 @@ section:nth-of-type(2) > section:nth-of-type(2) {
     transition: transform 0.3s ease-in-out;
 }
 
+
+
+
+/* HOVER EFFECT: ORANJE, RONDE HOEKEN. DUBBEL */
+/* CHATGPT: vraag "Hoe kan ik een overlay per image maken wanneer ik hover? */
+section:nth-of-type(2) li {
+    position: relative;
+    display: inline-block;
+}
+
+/* CHATGPT " */
+section:nth-of-type(2) li img {
+    display: block;
+    width: 100%; /* Zorg dat de afbeelding de breedte van het li-element vult */
+}
+
+/* CHATGPT " */
+section:nth-of-type(2) li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 165, 0, 0.8); /* Oranje overlay */
+    opacity: 0; /* Start onzichtbaar */
+    transition: opacity 0.3s ease;
+    z-index: 1; /* Zorg ervoor dat de overlay boven de afbeelding komt */
+}
+
+/* CHATGPT " */
+section:nth-of-type(2) li img {
+    position: relative;
+    z-index: 0;
+}
+
+/* CHATGPT " */
+section:nth-of-type(2) li:hover::after {
+    opacity: 1;
+}
+
+
+
+
+
+/* SECTION 3: BANNERS MET VIDEO'S */
+
 section:nth-of-type(3) {
     margin: 10em 0 1em 0;
-    padding: 0;
     border-top: 1px solid var(--color-text);
     position: relative;
 }
@@ -178,25 +234,28 @@ section:nth-of-type(3) h3, section:nth-of-type(3) a {
 
 section:nth-of-type(3) ul {
     list-style-type: none;
-    margin: 1em;
+    margin: 0;
     padding: 0;
 }
 
 section:nth-of-type(3) h3 {
     text-align: right;
     text-transform: uppercase;
-    font-family: 'Romie Italic', serif;
-    font-size: 4em;
+    font-family: 'Panama', serif;
+    font-size: 5em;
+    font-weight: 500;
+    color: var(--color-text-black);
+    margin-top: .5em;
     position: absolute;
     z-index: 10;
-    width: 900vw;
+    width: 1000vw;
     animation: h3Train 45s linear infinite;
 }
 
 section:nth-of-type(3) h3 + strong {
     text-align: right;
     text-transform: uppercase;
-    font-family: 'Suisse BP', 'Helvetica Neue', 'Arial', sans-serif;
+    font-family: 'CompactaStd bold', sans-serif;
     font-size: 4em;
     position: absolute;
     z-index: 10;
@@ -210,8 +269,20 @@ section:nth-of-type(3) h3 + strong {
     }
     
     100% {
-       left: -900%;
+       left: -1000%;
     }
+}
+
+section:nth-of-type(3) ul li:nth-of-type(1) {
+    background-color: var(--color-banner-pink);
+}
+
+section:nth-of-type(3) ul li:nth-of-type(2) {
+    background-color: var(--color-banner-orange);
+}
+
+section:nth-of-type(3) ul li:nth-of-type(3) {
+    background-color: var(--color-banner-pink);
 }
 
 section:nth-of-type(3) video {
@@ -221,12 +292,7 @@ section:nth-of-type(3) video {
     object-fit: cover;
     overflow: hidden;
     opacity: 0;
-}
-
-section:nth-of-type(3) ul li:nth-of-type(1) {
-    background-color: var(--color-banner-pink);
-    margin: 0;
-    padding: 0;
+    margin: 5em .75em 3em .75em;
 }
 
 section:nth-of-type(3) video:hover {
