@@ -33,3 +33,5 @@ function nextSlide() {
 
 previousButton.onclick = previousSlide; 
 nextButton.onclick = nextSlide;
+
+
