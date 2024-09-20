@@ -78,7 +78,8 @@ h1 + img {
     overflow: hidden;
 }
 
-section:nth-of-type(2) > section:nth-of-type(1) {
+/* ----------- SECTION 1: CAROUSEL -------- */
+section:nth-of-type(2) section:nth-of-type(1) {
     display: flex;
     align-items: center;
     gap: .4em;
@@ -124,10 +125,6 @@ li p strong::before {
     border-radius: 50%;
 }
 
-section:nth-of-type(2) > section:nth-of-type(2) {
-    margin: 0;
-}
-
 section:nth-of-type(2) ul {
     margin: 1em;
     padding: 0;
@@ -135,23 +132,19 @@ section:nth-of-type(2) ul {
     grid-template-columns: repeat(6, 1fr);
 }
 
-/* HOE STEL IK DE JUISTE BREEDTE IN? */
 section:nth-of-type(2) li {  
     margin-top: 2em;
-    grid-template-columns: 25em max-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 section:nth-of-type(2) li img {
     grid-column: 1/-1;
     grid-row-start: 1;
-    /* height: 35em;
-    width: 21.5em;
-    padding: 2em 0 1em 0; */
-    margin: 0;
     object-fit: cover;
 }
 
-section:nth-of-type(2) > section:nth-of-type(2) {
+section:nth-of-type(2) section:nth-of-type(2) {
     transition: transform 0.3s ease-in-out;
 }
 
@@ -159,25 +152,31 @@ section:nth-of-type(2) > section:nth-of-type(2) {
 
 
 
-/* ----------- HOVER STATE: SECTION ----------- 2*/
+/* ----------- HOVER STATE: SECTION ----------- */
+/* Met behulp van de docent! */
 section:nth-of-type(2) section:nth-of-type(2) li {
 	padding: 1em;
 	display: grid;
 	grid-template-areas:
-		"image"
-		"tekst";
+		"image image"
+		"strong text";
+    grid-template-columns: max-content 1fr;
 	gap: 1em;
 }
 
-section:nth-of-type(2) section:nth-of-type(2) p {
-	grid-area: tekst;
+section:nth-of-type(2) section:nth-of-type(2) p:nth-of-type(1) {
+	grid-area: strong;
+}
+
+section:nth-of-type(2) section:nth-of-type(2) li > p:nth-of-type(2) {
+	grid-area: text;
 	text-transform: capitalize;
 }
 
 section:nth-of-type(2) section:nth-of-type(2) img {
-	grid-area:image;
-	width:100%;
-	display:block;
+	grid-area: image;
+	width: 100%;
+	display: block;
 }
 
 section:nth-of-type(2) section:nth-of-type(2) div {
@@ -195,7 +194,8 @@ section:nth-of-type(2) section:nth-of-type(2) li div:has( :focus-visible ) {
 }
 
 section:nth-of-type(2) section:nth-of-type(2) img {
-	transition:.5s;
+	transition: .5s;
+    width: 30em;
 }
 
 section:nth-of-type(2) section:nth-of-type(2) li:has(div:hover) img,
@@ -234,13 +234,11 @@ section:nth-of-type(2) section:nth-of-type(2) div p {
 }
 
 
-
 /* SECTION 3: BANNERS MET VIDEO'S */
 
 section:nth-of-type(3) {
     margin: 10em 0 1em 0;
     border-top: 1px solid var(--color-text);
-    /* position: relative; */
 }
 
 section:nth-of-type(3) h2 {
@@ -248,7 +246,7 @@ section:nth-of-type(3) h2 {
     text-transform: uppercase;
     font-weight: 400;
     position: relative;
-    width: 400vw;
+    width: 200vw;
     animation: h2Train 25s linear infinite;
 }
 
