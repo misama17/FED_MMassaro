@@ -20,6 +20,7 @@
 	--color-wheel-white: #FCFDF8;
 	--color-wheel-lime: #CDF851;
 	--color-background-redorange: #FF4A23;
+    --color-placeholder: #595959;
 }
 
 /* DARK EN LIGHT MODE! */
@@ -138,6 +139,7 @@ section:nth-of-type(2) h2 {
 }
 
 section:nth-of-type(2) button {
+    appearance: none;
     border-radius: 50%;
     border: none;
     background-color: transparent;
@@ -166,20 +168,20 @@ section:nth-of-type(2) li p strong::before {
     border-radius: 50%;
 }
 
-section:nth-of-type(2) ul {
+main section:nth-of-type(2) ul {
     margin: 1em;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
 }
 
-section:nth-of-type(2) li {  
+main section:nth-of-type(2) li {  
     margin-top: 2em;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-section:nth-of-type(2) li img {
+main section:nth-of-type(2) li img {
     grid-column: 1/-1;
     grid-row-start: 1;
     object-fit: cover;
@@ -271,6 +273,14 @@ section:nth-of-type(2) section:nth-of-type(2) li:has(div:focus-within ) img {
 section:nth-of-type(2) section:nth-of-type(2) a:hover,
 section:nth-of-type(2) section:nth-of-type(2) a:focus-visible {
 	background-color: var(--color-background-white);
+}
+
+section:nth-of-type(2) button {
+    cursor: pointer;
+}
+
+section:nth-of-type(2):focus-visible {
+    outline-offset: .5em;
 }
 
 
@@ -423,6 +433,7 @@ section:nth-of-type(4) h2 {
 }
 
 section:nth-of-type(4) button {
+    appearance: none;
     border-radius: 50%;
     border: none;
     background-color: transparent;
@@ -469,8 +480,9 @@ section:nth-of-type(4) section:nth-of-type(2) li {
         "link link";
     grid-template-columns: max-content 1fr;
 	gap: 1em;
-    border: 3px solid var(--color-background-white);
+    border: 2.5px solid var(--color-background-white);
     border-radius: 1.5em;
+    margin-right: 1em;
 }
 
 section:nth-of-type(4) section:nth-of-type(2) img {
@@ -515,6 +527,187 @@ section:nth-of-type(4) section:nth-of-type(2) a:focus-visible {
 }
 
 
+
+
+
+
+/* --------- SECTION 5: ROTATING DISCS -------- */
+section:nth-of-type(5) ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 10em 1.5em 5em 1.5em;
+    padding: 0;
+}
+
+section:nth-of-type(5) a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    width: 7.5em;
+    height: 7.5em;
+    color: var(--color-text-black);
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    animation: rotate 15s linear infinite;
+}
+
+section:nth-of-type(5) li:nth-of-type(1) a {
+    background-color: var(--color-wheel-grey);
+}
+
+section:nth-of-type(5) li:nth-of-type(2) a {
+    background-color: var(--color-wheel-white);
+}
+
+section:nth-of-type(5) li:nth-of-type(3) a {
+    background-color: var(--color-wheel-lime);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ChatGPT: vraag "hoe pauseer ik het roteren wanneer ik er overheen hover?" */
+section:nth-of-type(5) a:hover {
+    animation-play-state: paused;
+}
+
+
+
+
+
+
+/* --------- SECTION 6: GET LATEST -------- */
+section:nth-of-type(6) {
+    background-color: var(--color-background-redorange);
+    color: var(--color-text-black);
+    display: grid;
+    grid-template-areas:
+		"h2 h2"
+		"form button";
+    grid-template-columns: 2fr 1fr;
+	gap: 2em;
+    padding: 2em 1em;
+}
+
+section:nth-of-type(6) h2 {
+    grid-area: h2;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+section:nth-of-type(6) form {
+    grid-area: form;
+}
+
+section:nth-of-type(6) input {
+    background-color: var(--color-background-white);
+    border-bottom: 2px solid var(--color-text-black);
+    border-radius: .5em;
+    appearance: none;
+    caret-color: var(--color-background-redorange);
+    margin-right: 3em;
+    width: 100%;
+}
+
+section:nth-of-type(6) input::placeholder {
+    color: var(--color-placeholder);
+}
+
+section:nth-of-type(6) input::selection {
+    color: var(--color-text);
+    background-color: var(--color-background-redorange);
+}
+
+section:nth-of-type(6) button {
+    grid-area: button;
+    appearance: none;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    border-radius: .5em;
+    border: 2px solid var(--color-text-black);
+    background-color: transparent;
+    width: 8em;
+    height: 2em;
+}
+
+section:nth-of-type(6) button:hover,
+section:nth-of-type(6) button:focus-visible {
+    color: var(--color-text);
+    background-color: var(--color-text-black);
+    outline-offset: .5em;
+    cursor: pointer;
+}
+
+
+
+
+
+/* ---------- FOOTER ---------- */
+footer section:nth-of-type(1) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+} 
+
+footer ul {
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+footer section:nth-of-type(1) > ul {
+    padding: 0;
+}
+
+footer section:nth-of-type(1) li > a {
+    color: var(--color-text);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+footer a > img {
+    width: 90%;
+    margin: 1em;
+}
+
+footer section:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+footer section:nth-of-type(2) li > a {
+    color: var(--color-text);
+    text-transform: capitalize;
+    text-decoration: none;
+    line-height: 2em;
+}
+
+
+
+/* ---------- HOVER: FOOTER --------- */
+footer ul li a:hover,
+footer ul li a:focus-visible {
+    color: var(--color-text-lime);
+    outline-offset: .5em;
+}
+
+footer a > img:hover {
+    fill: var(--color-text-lime);
+}
 
 
 
