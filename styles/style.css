@@ -22,6 +22,38 @@
 	--color-background-redorange: #FF4A23;
 }
 
+/* DARK EN LIGHT MODE! */
+/* :root {
+    color-scheme: light dark;
+	--color-text: light dark(#0F0E0E,#eee);
+    --color-text-lime: light dark(#396100,#CDF851);
+    --color-text-orange: light dark(#B30000, #D98100);
+    --color-text-black: light dark(#0F0E0E, #eee);
+	--color-background:light dark(#eee, #0F0E0E);
+    --color-background-white:light dark(#0F0E0E, #eee);
+	--color-transparant: rgba(252, 253, 248, 0.06275);
+	--color-banner-pink: light dark(#AD0028, #FFA8BD);
+	--color-banner-orange: light dark(#B30000, #D98100);
+	--color-banner-redorange: light dark(#A31E00, #FF4A23);
+	--color-hover-orange: light dark(#B30000, #D98100);
+	--color-wheel-grey: light dark(#5B5239, #B0A580);
+	--color-wheel-white: light dark(#0F0E0E, #FCFDF8);
+	--color-wheel-lime: light dark(#396100,#CDF851);
+	--color-background-redorange: light dark(#A31E00, #FF4A23);
+}
+
+html:has( [vlaue="light"]:checked ) {
+    color-scheme: light;
+}
+
+html:has( [vlaue="dark"]:checked ) {
+    color-scheme: dark;
+} */
+
+
+
+
+
 @font-face {
     font-family: 'Romie Italic';
     src: url(../fonts/Romie-Italic.woff2);
@@ -55,8 +87,12 @@ body {
     margin: 0;
 }
 
+
+
+
+
+/* ---------- SECTION 1: INTRO ---------- */
 h1 {
-    /* z-index: 10; */
     position: absolute;
     font-family: 'Romie Italic', serif;
     font-size: 3em;
@@ -78,7 +114,12 @@ h1 + img {
     overflow: hidden;
 }
 
-/* ----------- SECTION 1: CAROUSEL -------- */
+
+
+
+
+
+/* ----------- SECTION 2: CAROUSEL -------- */
 section:nth-of-type(2) section:nth-of-type(1) {
     display: flex;
     align-items: center;
@@ -107,7 +148,7 @@ section:nth-of-type(2) button img {
     height: 3em;
 }
 
-li p strong {
+section:nth-of-type(2) li p strong {
     text-transform: uppercase;
     color: var(--color-text-orange);
     font-weight: 400;
@@ -117,11 +158,11 @@ li p strong {
     align-items: center;
 }
 
-li p strong::before {
+section:nth-of-type(2) li p strong::before {
     content:"";
     width:.5em;
     aspect-ratio: 1;
-    background-color:currentColor;
+    background-color: currentColor;
     border-radius: 50%;
 }
 
@@ -148,12 +189,14 @@ section:nth-of-type(2) section:nth-of-type(2) {
     transition: transform 0.3s ease-in-out;
 }
 
+section:nth-of-type(2) section:nth-of-type(2) img {
+	grid-area: image;
+	width: 100%;
+	display: block;
+    transition: .5s;
+    width: 35em;
+}
 
-
-
-
-/* ----------- HOVER STATE: SECTION ----------- */
-/* Met behulp van de docent! */
 section:nth-of-type(2) section:nth-of-type(2) li {
 	padding: 1em;
 	display: grid;
@@ -173,34 +216,13 @@ section:nth-of-type(2) section:nth-of-type(2) li > p:nth-of-type(2) {
 	text-transform: capitalize;
 }
 
-section:nth-of-type(2) section:nth-of-type(2) img {
-	grid-area: image;
-	width: 100%;
-	display: block;
-}
-
 section:nth-of-type(2) section:nth-of-type(2) div {
 	grid-area: image;
 	background-color: var(--color-banner-orange);
-	opacity:0;
-	transition:.5s;
-	position: relative;
-}
-
-section:nth-of-type(2) section:nth-of-type(2) li div:hover,
-section:nth-of-type(2) section:nth-of-type(2) li div:has( :focus-visible ) {
-	opacity:1;
-	border-radius: 1.5em;
-}
-
-section:nth-of-type(2) section:nth-of-type(2) img {
+	opacity: 0;
 	transition: .5s;
-    width: 30em;
-}
-
-section:nth-of-type(2) section:nth-of-type(2) li:has(div:hover) img,
-section:nth-of-type(2) section:nth-of-type(2) li:has(div:focus-within ) img {
-	border-radius: 1.5em;
+	position: relative;
+    padding: 2em;
 }
 
 section:nth-of-type(2) section:nth-of-type(2) a {
@@ -219,11 +241,6 @@ section:nth-of-type(2) section:nth-of-type(2) a {
 	transition:.5s;
 }
 
-section:nth-of-type(2) section:nth-of-type(2) a:hover,
-section:nth-of-type(2) section:nth-of-type(2) a:focus-visible {
-	background-color: var(--color-background-white);
-}
-
 section:nth-of-type(2) section:nth-of-type(2) div {
 	color: var(--color-text-black);
 	text-align: center;
@@ -233,9 +250,35 @@ section:nth-of-type(2) section:nth-of-type(2) div p {
     text-transform: uppercase;
 }
 
+section:nth-of-type(2) section:nth-of-type(2) div p:nth-of-type(2) {
+    font-size: 1.5em;
+}
 
-/* SECTION 3: BANNERS MET VIDEO'S */
 
+/* ----------- HOVER STATE: SECTION 2 ----------- */
+/* Met behulp van de docent! */
+section:nth-of-type(2) section:nth-of-type(2) li div:hover,
+section:nth-of-type(2) section:nth-of-type(2) li div:has( :focus-visible ) {
+	opacity:1;
+	border-radius: 1.5em;
+}
+
+section:nth-of-type(2) section:nth-of-type(2) li:has(div:hover) img,
+section:nth-of-type(2) section:nth-of-type(2) li:has(div:focus-within ) img {
+	border-radius: 1.5em;
+}
+
+section:nth-of-type(2) section:nth-of-type(2) a:hover,
+section:nth-of-type(2) section:nth-of-type(2) a:focus-visible {
+	background-color: var(--color-background-white);
+}
+
+
+
+
+
+
+/* ---------- SECTION 3: BANNERS MET VIDEO'S ----------*/
 section:nth-of-type(3) {
     margin: 10em 0 1em 0;
     border-top: 1px solid var(--color-text);
@@ -268,6 +311,7 @@ section:nth-of-type(3) ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 section:nth-of-type(3) h3 {
@@ -277,7 +321,7 @@ section:nth-of-type(3) h3 {
     font-size: 5em;
     font-weight: 500;
     color: var(--color-text-black);
-    margin-top: .5em;
+    margin-top: 1em;
     position: absolute;
     z-index: 20;
     width: 1000vw;
@@ -301,7 +345,7 @@ section:nth-of-type(3) h3 + strong {
     }
     
     100% {
-       left: -1000%;
+       left: -800%;
     }
 }
 
@@ -325,8 +369,9 @@ section:nth-of-type(3) video {
     filter: grayscale(100%);
     display: block;
     height: calc(70vh - 2em);
-    width: calc(100% - 2em);
+    width: calc(100% - 3em);
     margin: auto auto;
+    padding: 7.5em 0 4em 0;
     object-fit: cover;
     z-index: -10;
     overflow: hidden;
@@ -352,4 +397,140 @@ section:nth-of-type(3) a {
     padding: .05em .5em .05em .5em;
     border-radius: .25em;
     z-index: 20;
+}
+
+
+
+
+
+
+/* ---------- SECTION 4: CAROUSEL --------- */
+section:nth-of-type(4) section:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+    gap: .4em;
+    margin: .75em;
+    padding-top: 2em;
+    border-bottom: 1px solid var(--color-text);
+}
+
+section:nth-of-type(4) h2 {
+    margin-right: auto;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 400;
+    line-height: 1em;
+}
+
+section:nth-of-type(4) button {
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+}
+
+section:nth-of-type(4) button img {
+    filter: invert(1);
+    height: 3em;
+}
+
+section:nth-of-type(4) ul {
+    margin: 1em;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+section:nth-of-type(4) li {  
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section:nth-of-type(4) li img {
+    grid-column: 1/-1;
+    grid-row-start: 1;
+    object-fit: cover;
+}
+
+section:nth-of-type(4) section:nth-of-type(2) {
+    transition: transform 0.3s ease-in-out;
+}
+
+section:nth-of-type(4) li p strong {
+    color: var(--color-text-lime);
+}
+
+section:nth-of-type(4) section:nth-of-type(2) li {
+	padding: 1em;
+	display: grid;
+	grid-template-areas:
+		"image image"
+		"strong text"
+        "link link";
+    grid-template-columns: max-content 1fr;
+	gap: 1em;
+    border: 3px solid var(--color-background-white);
+    border-radius: 1.5em;
+}
+
+section:nth-of-type(4) section:nth-of-type(2) img {
+	grid-area: image;
+	width: 100%;
+	display: block;
+    transition: .5s;
+    width: 15em;
+}
+
+section:nth-of-type(4) section:nth-of-type(2) p:nth-of-type(1) {
+	grid-area: strong;
+}
+
+section:nth-of-type(4) section:nth-of-type(2) li > p:nth-of-type(2) {
+	grid-area: text;
+	text-transform: capitalize;
+}
+
+section:nth-of-type(4) section:nth-of-type(2) a {
+	grid-area: link;
+	width: 100%;
+	display: block;
+    transition: .5s;
+    width: 15em;
+    color: var(--color-text);
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+
+
+/* ---------- HOVER: SECTION 4: CAROUSEL --------- */
+section:nth-of-type(4) section:nth-of-type(2) li:hover img,
+section:nth-of-type(4) section:nth-of-type(2) li:has( :focus-visible ) {
+    border-radius: 1.5em;
+}
+
+section:nth-of-type(4) section:nth-of-type(2) a:hover,
+section:nth-of-type(4) section:nth-of-type(2) a:focus-visible {
+	color: var(--color-text-lime);
+}
+
+
+
+
+
+
+/* ---------- VOOR BREDER BEELDSCHERM ---------- */
+@media screen and (min-width: 48em) {
+    section:nth-of-type(3) video {
+        filter: grayscale(100%);
+        display: block;
+        height: 45vh;
+        width: 100%;
+        padding: 0;
+        object-fit: cover;
+        z-index: -10;
+        overflow: hidden;
+        opacity: 0;  
+    }
+
 }
