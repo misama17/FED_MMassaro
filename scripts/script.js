@@ -1,4 +1,8 @@
-// CONSTANTEN
+// CONSTANTS
+const openButton = document.querySelector("header > button");
+const navigation = document.querySelector("nav");
+const closeButton = document.querySelector("nav button");
+
 const slides1 = document.querySelectorAll('section:nth-of-type(2) li');
 const previousButton1 = document.querySelector('section:nth-of-type(2) button:nth-of-type(1)');
 const nextButton1 = document.querySelector('section:nth-of-type(2) button:nth-of-type(2)');
@@ -6,13 +10,26 @@ const slides2 = document.querySelectorAll('section:nth-of-type(4) li');
 const previousButton2 = document.querySelector('section:nth-of-type(4) button:nth-of-type(1)');
 const nextButton2 = document.querySelector('section:nth-of-type(4) button:nth-of-type(2)');
 
-// VARIABELEN
+// VARIABLES
 let currentSlide1 = 0;
 let totalSlides1 = slides1.length;
 let currentSlide2 = 0;
 let totalSlides2 = slides2.length;
 
-// CAROUSEL SLIDE SHOW
+
+
+// ---------- MENU ----------
+function openMenu() {
+    navigation.classList.toggle("showMenu");
+}
+
+function closeMenu() {
+    navigation.classList.remove("showMenu");
+}
+
+
+
+// ---------- CAROUSEL SLIDE SHOW ----------
 // CHATGPT >> vraag: ik wil een carousel maken waarbij je naar het volgende en vorige plaatje kunt gaan door te klikken op een button.
 function slideShow1(index) {
     if (index >= totalSlides1) {
@@ -56,6 +73,12 @@ function previousSlide2() {
   slideShow2(currentSlide2 - 1);
 }
 
+
+
+
+// ---------- EVENTLISTENERS ----------
+openButton.onclick = openMenu;
+closeButton.onclick = closeMenu;
 previousButton1.onclick = previousSlide1; 
 nextButton1.onclick = nextSlide1;
 previousButton2.onclick = previousSlide2; 
