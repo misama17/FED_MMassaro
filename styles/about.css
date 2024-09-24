@@ -1,10 +1,30 @@
-h2 {
+main {
+    overflow: hidden;
+}
+
+main h2 {
     font-size: 2em;
     color: var(--color-text-black);
     text-transform: uppercase;
     font-weight: 400;
     margin: 0;
     padding: 2em .6em 1em .6em;
+}
+
+main p {
+    color: var(--color-text-black);
+    font-family: 'Suisse BP light', sans-serif;
+    font-size: 1.1em;
+    color: var(--color-text-black);
+    margin: 1em;
+}
+
+blockquote {
+    font-family: 'CompactaStd bold', sans-serif;
+    font-size: 5em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-text);
 }
 
 /* ---------- SECTION 1: INTRO ---------- */
@@ -18,13 +38,15 @@ h1 {
     grid-column: 1/-1;
     grid-row-start: 1;
     font-family: 'CompactaStd bold', sans-serif;
-    font-size: 7em;
+    font-size: 6em;
     color: var(--color-text);
     text-transform: uppercase;
     text-align: center;
     align-self: center;
+    justify-self: center;
     letter-spacing: .25em;
-    padding: 2.25em 0;
+    padding: 2.75em 0;
+    margin: 1em;
 }
 
 section:nth-of-type(1) img {
@@ -38,7 +60,7 @@ section:nth-of-type(1) img {
 
 
 /* ---------- SECTION 2: PARTNERS EN LINKS ---------- */
-section:nth-of-type(2) {
+main section:nth-of-type(2) {
     background-color: var(--color-background-white);
     height: 85vh;
     display: grid;
@@ -59,7 +81,7 @@ section:nth-of-type(2) h2 {
     padding: 0;
 }
 
-section:nth-of-type(2) p {
+main section:nth-of-type(2) p {
     color: var(--color-text-black);
     grid-row-start: 3;
     text-align: center;
@@ -69,7 +91,7 @@ section:nth-of-type(2) p {
     margin: 0;
 }
 
-section:nth-of-type(2) a {
+main section:nth-of-type(2) a {
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
@@ -82,14 +104,14 @@ section:nth-of-type(2) a {
     margin: 0 .5em;
 }
 
-section:nth-of-type(2) a:nth-of-type(1) {
+main section:nth-of-type(2) a:nth-of-type(1) {
     width: 8em;
     height: 1.25em;
     grid-row-start: 1;
     align-self: end;
 }
 
-section:nth-of-type(2) a:nth-of-type(2) {
+main section:nth-of-type(2) a:nth-of-type(2) {
     width: 8.5em;
     height: 1.25em;
     grid-row-start: 2;
@@ -103,13 +125,6 @@ section:nth-of-type(2) a:nth-of-type(2) {
 /* ---------- SECTION 3: ARTISTS ---------- */
 section:nth-of-type(3) {
     background-color: var(--color-banner-pink);
-}
-
-section:nth-of-type(3) p {
-    color: var(--color-text-black);
-    font-family: 'Suisse BP light', sans-serif;
-    font-size: 1.1em;
-    margin: 1em;
 }
 
 section:nth-of-type(3) a {
@@ -160,14 +175,6 @@ section:nth-of-type(5) h2 {
     grid-row: 3;
 }
 
-section:nth-of-type(5) p {
-    color: var(--color-text-black);
-    font-family: 'Suisse BP light', sans-serif;
-    font-size: 1.1em;
-    color: var(--color-text-black);
-    margin: 1em;
-}
-
 section:nth-of-type(5) p:nth-of-type(1) {
     grid-row: 4;
 }
@@ -177,10 +184,6 @@ section:nth-of-type(5) p:nth-of-type(2) {
 }
 
 section:nth-of-type(5) blockquote {
-    font-family: 'CompactaStd bold', sans-serif;
-    font-size: 5em;
-    text-align: center;
-    text-transform: uppercase;
     grid-row: 1;
 }
 
@@ -197,30 +200,242 @@ section:nth-of-type(5) img {
 section:nth-of-type(6) {
     background-color: var(--color-background-white);
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 3.5em 1fr;
+    grid-template-rows: 1fr 10em 5em 10em 6em;
 }
 
 section:nth-of-type(6) h2 {
     grid-row: 3;
+    grid-column: 1/-1;
+    align-self: center;
 }
 
 section:nth-of-type(6) p {
     grid-row: 4;
     grid-column: 1/-1;
-    color: var(--color-text-black);
 }
 
 section:nth-of-type(6) button > img {
     grid-row: 2;
     grid-column: 1/-1;
+    height: 3em;
+    margin: .5em;
 }
 
-section:nth-of-type(6) img {
+section:nth-of-type(6) button {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    justify-self: start;
+    align-self: end;
+}
+
+section:nth-of-type(6) > img {
     grid-row: 1;
     grid-column: 1/-1;
+    padding: 2em 1em;
 }
 
 section:nth-of-type(6) a {
     grid-row: 5;
+    grid-column: 1;
+    align-self: start;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    border: none;
+    border-radius: .5em;
+    text-align: center;
+    font-size: 1.25em;
+    width: 8em;
+    height: 1.75em;
+    line-height: 1.75em;
+    margin: 0 1em;
+}
+
+
+
+
+
+/* ---------- SECTION 8: QUOTE EN ASPIRATION ---------- */
+section:nth-of-type(8) {
+    background-color: var(--color-background);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-self: center;
+}
+
+section:nth-of-type(8) p {
+    color: var(--color-text);
+    text-align: center;
+    width: 50%;
+    justify-self: center;
+    line-height: 1.2em;
+}
+
+section:nth-of-type(8) blockquote {
+    width: 55%;
+    justify-self: center;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/* --------- SECTION 9: ROTATING DISCS -------- */
+section:nth-of-type(9) ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 10em 1em 5em 1em;
+    padding: 0;
+}
+
+section:nth-of-type(9) a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    width: 6.5em;
+    height: 6.5em;
+    color: var(--color-text-black);
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    animation: rotate 15s linear infinite;
+}
+
+section:nth-of-type(9) li:nth-of-type(1) a {
+    background-color: var(--color-wheel-pink);
+}
+
+section:nth-of-type(9) li:nth-of-type(2) a {
+    background-color: var(--color-wheel-white);
+}
+
+section:nth-of-type(9) li:nth-of-type(3) a {
+    background-color: var(--color-wheel-lime);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ChatGPT: vraag "hoe pauseer ik het roteren wanneer ik er overheen hover?" */
+section:nth-of-type(9) a:hover {
+    animation-play-state: paused;
+}
+
+
+
+
+
+
+/* --------- SECTION 10: GET LATEST -------- */
+section:nth-of-type(10) {
+    background-color: var(--color-background-redorange);
+    color: var(--color-text-black);
+    display: grid;
+    grid-template-areas:
+		"h2 h2"
+		"form button";
+    grid-template-columns: 2fr 1fr;
+	gap: 2em;
+    padding: 2em 1em;
+}
+
+section:nth-of-type(10) h2 {
+    grid-area: h2;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+section:nth-of-type(10) form {
+    grid-area: form;
+}
+
+section:nth-of-type(10) input {
+    background-color: var(--color-background-white);
+    border-bottom: 2px solid var(--color-text-black);
+    border-radius: .5em;
+    appearance: none;
+    caret-color: var(--color-background-redorange);
+    margin-right: 3em;
+    width: 100%;
+}
+
+section:nth-of-type(10) input::placeholder {
+    color: var(--color-placeholder);
+}
+
+section:nth-of-type(10) input::selection {
+    color: var(--color-text);
+    background-color: var(--color-background-redorange);
+}
+
+section:nth-of-type(10) button {
+    grid-area: button;
+    appearance: none;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    border-radius: .5em;
+    border: 2px solid var(--color-text-black);
+    background-color: transparent;
+    width: 8em;
+    height: 2em;
+}
+
+section:nth-of-type(10) button:hover,
+section:nth-of-type(10) button:focus-visible {
+    color: var(--color-text);
+    background-color: var(--color-text-black);
+    outline-offset: .5em;
+    cursor: pointer;
+}
+
+
+
+
+
+
+body {
+    cursor:auto;
+} 
+
+/* .custom-cursor {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    pointer-events: none;
+    mix-blend-mode: difference; /* Invert the color where it passes */
+    /* z-index: 10000;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+} */ 
+
+#invertedcursor {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    top: var(--y, 0);
+    left: var(--x, 0);
+    transform: translate(-50%, -50%);
+    z-index: 100000;
+    mix-blend-mode: difference;
+    transition: transform .2s;
 }
