@@ -49,11 +49,19 @@ section:nth-of-type(2) button {
     border-radius: 50%;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
-section:nth-of-type(2) button img {
-    filter: invert(1);
-    height: 3em;
+section:nth-of-type(2) button svg {
+    height: 4em;
+}
+
+section:nth-of-type(2) button path {
+    fill: var(--color-text);
+}
+
+section:nth-of-type(2) button circle {
+    stroke: var(--color-text);
 }
 
 section:nth-of-type(2) li p strong {
@@ -181,13 +189,20 @@ section:nth-of-type(2) section:nth-of-type(2) a:focus-visible {
 	background-color: var(--color-background-white);
 }
 
-section:nth-of-type(2) button {
-    cursor: pointer;
-}
-
-section:nth-of-type(2):focus-visible {
+section:nth-of-type(2) button:focus-visible {
     outline-offset: .5em;
 }
+
+section:nth-of-type(2) button path:hover, 
+section:nth-of-type(2) button path:focus-visible {
+    fill: var(--color-text-lime);
+}
+
+section:nth-of-type(2) button circle:hover, 
+section:nth-of-type(2) button circle:focus-visible {
+    stroke: var(--color-text-lime);
+}
+
 
 
 
@@ -221,6 +236,13 @@ section:nth-of-type(3) h2 {
 
 section:nth-of-type(3) h3, section:nth-of-type(3) a {
     position: absolute;
+}
+
+section:nth-of-type(3) a:hover,
+section:nth-of-type(3) a:focus-visible {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    scale: 1.1;
 }
 
 section:nth-of-type(3) ul {
@@ -345,9 +367,16 @@ section:nth-of-type(4) button {
     background-color: transparent;
 }
 
-section:nth-of-type(4) button img {
-    filter: invert(1);
-    height: 3em;
+section:nth-of-type(4) button svg {
+    height: 4em;
+}
+
+section:nth-of-type(4) button path {
+    fill: var(--color-text);
+}
+
+section:nth-of-type(4) button circle {
+    stroke: var(--color-text);
 }
 
 section:nth-of-type(4) ul {
@@ -432,7 +461,15 @@ section:nth-of-type(4) section:nth-of-type(2) a:focus-visible {
 	color: var(--color-text-lime);
 }
 
+section:nth-of-type(4) button path:hover, 
+section:nth-of-type(4) button path:focus-visible {
+    fill: var(--color-text-lime);
+}
 
+section:nth-of-type(4) button circle:hover, 
+section:nth-of-type(4) button circle:focus-visible {
+    stroke: var(--color-text-lime);
+}
 
 
 
@@ -518,12 +555,14 @@ section:nth-of-type(6) form {
 
 section:nth-of-type(6) input {
     background-color: var(--color-background-white);
-    border-bottom: 2px solid var(--color-text-black);
-    border-radius: .5em;
+    border: none;
+    border-radius: .25em;
     appearance: none;
     caret-color: var(--color-background-redorange);
     margin-right: 3em;
+    margin-top: .5em;
     width: 100%;
+    max-width: 25em;
 }
 
 section:nth-of-type(6) input::placeholder {
@@ -537,6 +576,7 @@ section:nth-of-type(6) input::selection {
 
 section:nth-of-type(6) button {
     grid-area: button;
+    align-self: center;
     appearance: none;
     font-size: 1.25em;
     text-transform: uppercase;
@@ -551,6 +591,7 @@ section:nth-of-type(6) button:hover,
 section:nth-of-type(6) button:focus-visible {
     color: var(--color-text);
     background-color: var(--color-text-black);
+    scale: 1.1;
     outline-offset: .5em;
     cursor: pointer;
 }
