@@ -148,18 +148,18 @@ Specifieke vragen:
 
   | student 1      | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | CSS verwijzingen  | en dit             | en ik dit    | en dan ik dat    |
+  | Upload github | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | before en after         | ...                | ...          | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Ik gebruik de juiste manier van verwijzen in css, maar misschien problemen wanneer ik de footer ga maken.
+  - Github desktop afsluiten en openen om error te verhelpen
+  - Het is een goed idee om bij een probleem eerst goed naar de structuur van de html te kijken voordat je naar de css gaat kijken.
+  - Eerst zorgen dat de basis goed is, voordat je de echt moeilijke animaties gaat uitwerken. Dit kan op het einde.
 
 </details>
 
@@ -193,20 +193,23 @@ Specifieke vragen:
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Mila           | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Menu           | en dit             | en ik dit    | en dan ik dat    |
+  | Links VS buttons SR | dit als er tijd is | nog een punt | dit wil ik zeker |
+  | High contrast mode  | ...                | ...          | ...              |
+
+  - Is het oke om een pagina surface plane en de andere pagina responsive te doen? (de tweede pagina heeft minder animaties etc, en degene die het heeft heb ik al uitgewerkt. Maar ik kan hem wel heel goed responsive maken en zo oefen ik met beide)
+  - Hoe selecteer je elementen als je twee verschillende HTML pagina's hebt met Javascript? Heb je dan ook twee javascript nodig?
+  - Moet ik "menu" van hamburgermenu ook een duidelijke button maken?
+  - Hoe zorg ik ervoor dat ik een h1 heb die wel voorgelezen wordt met de screenreader, maar niet te zien is op de pagina? (bij mijn tweede pagina heb ik nu een h1 die eigenlijk niet de pagina omschrijft en dus ook niet goed is als h1)
+  - De darkmode is me niet gelukt om uit te werken. Ik heb wel alle kleuralternatieven toegevoegd, maar een deel wordt niet opgepakt.
+  - Hoe werkt before en after precies? wat doet het?
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
 
 </details>
 
