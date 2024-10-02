@@ -1,10 +1,11 @@
 main {
     overflow: hidden;
+    margin: 0;
 }
 
 main h2 {
     font-size: 2em;
-    color: var(--color-text-black);
+    color: var(--color-text-two);
     text-transform: uppercase;
     font-weight: 400;
     margin: 0;
@@ -12,10 +13,10 @@ main h2 {
 }
 
 main p {
-    color: var(--color-text-black);
+    color: var(--color-text-two);
     font-family: 'Suisse BP light', sans-serif;
     font-size: 1.1em;
-    color: var(--color-text-black);
+    color: var(--color-text-two);
     margin: 1em;
 }
 
@@ -24,7 +25,7 @@ blockquote {
     font-size: 5em;
     text-align: center;
     text-transform: uppercase;
-    color: var(--color-text);
+    color: var(--color-text-one);
 }
 
 /* ---------- SECTION 1: INTRO ---------- */
@@ -34,12 +35,12 @@ main section:nth-of-type(1) {
     height: 100vh;
 }
 
-h1 {
+section:nth-of-type(1) h2 {
     grid-column: 1/-1;
     grid-row-start: 1;
     font-family: 'CompactaStd bold', sans-serif;
     font-size: 6em;
-    color: var(--color-text);
+    color: var(--color-text-one);
     text-transform: uppercase;
     text-align: center;
     align-self: center;
@@ -61,7 +62,7 @@ section:nth-of-type(1) img {
 
 /* ---------- SECTION 2: PARTNERS EN LINKS ---------- */
 main section:nth-of-type(2) {
-    background-color: var(--color-background-white);
+    background-color: var(--color-background-three);
     height: 85vh;
     display: grid;
     grid-template-columns: 1fr;
@@ -71,7 +72,7 @@ main section:nth-of-type(2) {
 
 section:nth-of-type(2) h2 {
     font-family: 'CompactaStd bold', sans-serif;
-    color: var(--color-text-black);
+    color: var(--color-text-one);
     text-transform: uppercase;
     font-size: 4em;
     grid-row-start: 4;
@@ -82,7 +83,7 @@ section:nth-of-type(2) h2 {
 }
 
 main section:nth-of-type(2) p {
-    color: var(--color-text-black);
+    color: var(--color-text-one);
     grid-row-start: 3;
     text-align: center;
     text-transform: uppercase;
@@ -95,9 +96,9 @@ main section:nth-of-type(2) a {
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
-    color: var(--color-text-black);
-    background-color: var(--color-background-white);
-    border: 2px solid var(--color-text-black);
+    color: var(--color-text-one);
+    background-color: var(--color-background-three);
+    border: 2px solid var(--color-text-one);
     border-radius: .25em;
     text-align: center;
     font-size: 2em;
@@ -119,20 +120,32 @@ main section:nth-of-type(2) a:nth-of-type(2) {
 }
 
 
+/* HOVER */
+main section:nth-of-type(2) a:hover {
+    scale: 1.1;
+    background-color: var(--color-background-two);
+    color: var(--color-text-two);
+}
+
+
 
 
 
 /* ---------- SECTION 3: ARTISTS ---------- */
 section:nth-of-type(3) {
-    background-color: var(--color-banner-pink);
+    background-color: var(--color-banner-one);
+}
+
+section:nth-of-type(3) p, section:nth-of-type(3) h2 {
+    color: var(--color-text-one);
 }
 
 section:nth-of-type(3) a {
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
-    color: var(--color-text);
-    background-color: var(--color-background);
+    color: var(--color-text-two);
+    background-color: var(--color-background-two);
     border: none;
     border-radius: .5em;
     text-align: center;
@@ -144,7 +157,10 @@ section:nth-of-type(3) a {
 }
 
 
-
+/* HOVER */
+section:nth-of-type(3) a:hover {
+    transform: scale(1.1);
+}
 
 
 
@@ -173,6 +189,11 @@ section:nth-of-type(5) {
 
 section:nth-of-type(5) h2 {
     grid-row: 3;
+    color: var(--color-text-one);
+}
+
+section:nth-of-type(5) p {
+    color: var(--color-text-one);
 }
 
 section:nth-of-type(5) p:nth-of-type(1) {
@@ -198,7 +219,7 @@ section:nth-of-type(5) img {
 
 /* ---------- SECTION 6: RCA IMPACT ---------- */
 section:nth-of-type(6) {
-    background-color: var(--color-background-white);
+    background-color: var(--color-background-three);
     display: grid;
     grid-template-columns: 3.5em 1fr;
     grid-template-rows: 1fr 10em 5em 10em 6em;
@@ -208,11 +229,13 @@ section:nth-of-type(6) h2 {
     grid-row: 3;
     grid-column: 1/-1;
     align-self: center;
+    color: var(--color-text-one);
 }
 
 section:nth-of-type(6) p {
     grid-row: 4;
     grid-column: 1/-1;
+    color: var(--color-text-one);
 }
 
 section:nth-of-type(6) button > img {
@@ -229,6 +252,15 @@ section:nth-of-type(6) button {
     border-radius: 50%;
     justify-self: start;
     align-self: end;
+    margin: 0 1em;
+}
+
+section:nth-of-type(6) button path {
+    fill: var(--color-text-one);
+}
+
+section:nth-of-type(6) button circle {
+    stroke: var(--color-text-one);
 }
 
 section:nth-of-type(6) > img {
@@ -243,8 +275,8 @@ section:nth-of-type(6) a {
     align-self: start;
     text-decoration: none;
     text-transform: uppercase;
-    color: var(--color-text);
-    background-color: var(--color-background);
+    color: var(--color-text-two);
+    background-color: var(--color-background-two);
     border: none;
     border-radius: .5em;
     text-align: center;
@@ -255,27 +287,48 @@ section:nth-of-type(6) a {
     margin: 0 1em;
 }
 
+/* HOVER */
+section:nth-of-type(6) button svg:hover {
+    transform: scale(1.1);
+}
+
+section:nth-of-type(6) button svg:hover path, 
+section:nth-of-type(6) button svg:focus-visible path {
+    fill: var(--color-text-one);
+}
+
+section:nth-of-type(6) button svg:hover circle, 
+section:nth-of-type(6) button svg:focus-visible circle {
+    stroke: var(--color-text-one);
+}
+
+section:nth-of-type(6) a:hover {
+    transform: scale(1.1);
+}
 
 
 
 
-/* ---------- SECTION 8: QUOTE EN ASPIRATION ---------- */
-section:nth-of-type(8) {
-    background-color: var(--color-background);
+
+
+
+/* ---------- SECTION 7: QUOTE EN ASPIRATION ---------- */
+section:nth-of-type(7) {
+    background-color: var(--color-background-one);
     display: grid;
     grid-template-columns: 1fr;
     justify-self: center;
 }
 
-section:nth-of-type(8) p {
-    color: var(--color-text);
+section:nth-of-type(7) p {
+    color: var(--color-text-one);
     text-align: center;
     width: 50%;
     justify-self: center;
     line-height: 1.2em;
 }
 
-section:nth-of-type(8) blockquote {
+section:nth-of-type(7) blockquote {
     width: 55%;
     justify-self: center;
     text-align: center;
@@ -287,8 +340,9 @@ section:nth-of-type(8) blockquote {
 
 
 
-/* --------- SECTION 9: ROTATING DISCS -------- */
-section:nth-of-type(9) ul {
+
+/* --------- SECTION 8: ROTATING DISCS -------- */
+section:nth-of-type(8) ul {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
@@ -296,7 +350,7 @@ section:nth-of-type(9) ul {
     padding: 0;
 }
 
-section:nth-of-type(9) a {
+section:nth-of-type(8) a {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -304,7 +358,7 @@ section:nth-of-type(9) a {
     padding: 2em;
     width: 6.5em;
     height: 6.5em;
-    color: var(--color-text-black);
+    color: var(--color-text-one);
     border-radius: 50%;
     text-align: center;
     text-decoration: none;
@@ -312,16 +366,16 @@ section:nth-of-type(9) a {
     animation: rotate 15s linear infinite;
 }
 
-section:nth-of-type(9) li:nth-of-type(1) a {
-    background-color: var(--color-wheel-pink);
+section:nth-of-type(8) li:nth-of-type(1) a {
+    background-color: var(--color-wheel-two);
 }
 
-section:nth-of-type(9) li:nth-of-type(2) a {
-    background-color: var(--color-wheel-white);
+section:nth-of-type(8) li:nth-of-type(2) a {
+    background-color: var(--color-wheel-one);
 }
 
-section:nth-of-type(9) li:nth-of-type(3) a {
-    background-color: var(--color-wheel-lime);
+section:nth-of-type(8) li:nth-of-type(3) a {
+    background-color: var(--color-wheel-three);
 }
 
 @keyframes rotate {
@@ -334,7 +388,7 @@ section:nth-of-type(9) li:nth-of-type(3) a {
 }
 
 /* ChatGPT: vraag "hoe pauseer ik het roteren wanneer ik er overheen hover?" */
-section:nth-of-type(9) a:hover {
+section:nth-of-type(8) a:hover {
     animation-play-state: paused;
 }
 
@@ -343,10 +397,12 @@ section:nth-of-type(9) a:hover {
 
 
 
-/* --------- SECTION 10: GET LATEST -------- */
-section:nth-of-type(10) {
-    background-color: var(--color-background-redorange);
-    color: var(--color-text-black);
+
+
+/* --------- SECTION 9: GET LATEST -------- */
+section:nth-of-type(9) {
+    background-color: var(--color-background-three);
+    color: var(--color-text-one);
     display: grid;
     grid-template-areas:
 		"h2 h2"
@@ -356,51 +412,55 @@ section:nth-of-type(10) {
     padding: 2em 1em;
 }
 
-section:nth-of-type(10) h2 {
+section:nth-of-type(9) h2 {
     grid-area: h2;
     font-size: 1.2em;
     font-weight: 400;
+    color: var(--color-text-one);
 }
 
-section:nth-of-type(10) form {
+section:nth-of-type(9) form {
     grid-area: form;
 }
 
-section:nth-of-type(10) input {
-    background-color: var(--color-background-white);
-    border-bottom: 2px solid var(--color-text-black);
+section:nth-of-type(9) input {
+    background-color: var(--color-background-five);
+    border-bottom: 2px solid var(--color-text-input);
     border-radius: .5em;
+    border: none;
     appearance: none;
-    caret-color: var(--color-background-redorange);
+    caret-color: var(--color-background-four);
     margin-right: 3em;
     width: 100%;
 }
 
-section:nth-of-type(10) input::placeholder {
+section:nth-of-type(9) input::placeholder {
     color: var(--color-placeholder);
 }
 
-section:nth-of-type(10) input::selection {
-    color: var(--color-text);
-    background-color: var(--color-background-redorange);
+section:nth-of-type(9) input::selection {
+    color: var(--color-text-one);
+    background-color: var(--color-background-four);
 }
 
-section:nth-of-type(10) button {
+section:nth-of-type(9) button {
     grid-area: button;
     appearance: none;
-    font-size: 1.25em;
+    font-size: 1.1em;
     text-transform: uppercase;
+    color: var(--color-text-one);
     border-radius: .5em;
-    border: 2px solid var(--color-text-black);
+    border: 2px solid var(--color-text-one);
     background-color: transparent;
-    width: 8em;
+    width: 7.25em;
     height: 2em;
 }
 
-section:nth-of-type(10) button:hover,
-section:nth-of-type(10) button:focus-visible {
-    color: var(--color-text);
-    background-color: var(--color-text-black);
+section:nth-of-type(9) button:hover,
+section:nth-of-type(9) button:focus-visible {
+    color: var(--color-text-two);
+    background-color: var(--color-text-one);
+    transform: scale(1.1);
     outline-offset: .5em;
     cursor: pointer;
 }
@@ -410,21 +470,15 @@ section:nth-of-type(10) button:focus-visible {
 
 
 
+
+
+
+
+
+
 body {
     cursor:auto;
 } 
-
-/* .custom-cursor {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: white;
-    pointer-events: none;
-    mix-blend-mode: difference; /* Invert the color where it passes */
-    /* z-index: 10000;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-} */ 
 
 #invertedcursor {
     position: absolute;

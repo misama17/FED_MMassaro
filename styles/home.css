@@ -9,6 +9,7 @@ h1 {
     top: 50%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
+    color: var(--color-background-five);
 }
 
 h1 + img {
@@ -33,7 +34,7 @@ section:nth-of-type(2) section:nth-of-type(1) {
     gap: .4em;
     margin: .75em;
     padding-top: 2em;
-    border-bottom: 1px solid var(--color-text);
+    border-bottom: 1px solid var(--color-text-one);
 }
 
 section:nth-of-type(2) h2 {
@@ -57,16 +58,16 @@ section:nth-of-type(2) button svg {
 }
 
 section:nth-of-type(2) button path {
-    fill: var(--color-text);
+    fill: var(--color-text-one);
 }
 
 section:nth-of-type(2) button circle {
-    stroke: var(--color-text);
+    stroke: var(--color-text-one);
 }
 
 section:nth-of-type(2) li p strong {
     text-transform: uppercase;
-    color: var(--color-text-orange);
+    color: var(--color-text-four);
     font-weight: 400;
 
     display:flex;
@@ -141,7 +142,7 @@ section:nth-of-type(2) section:nth-of-type(2) li > p:nth-of-type(2) {
 
 section:nth-of-type(2) section:nth-of-type(2) div {
 	grid-area: image;
-	background-color: var(--color-banner-orange);
+	background-color: var(--color-hover);
 	opacity: 0;
 	transition: .5s;
 	position: relative;
@@ -157,15 +158,15 @@ section:nth-of-type(2) section:nth-of-type(2) a {
 	bottom: 0;
 	margin: 0;
     padding: 3em;
-	color: var(--color-text-black);
+	color: var(--color-text-two);
 	text-decoration: none;
-	border-top: 1px solid var(--color-text);
+	border-top: 1px solid var(--color-text-one);
     border-radius: 0 0 1.5em 1.5em;
 	transition:.5s;
 }
 
 section:nth-of-type(2) section:nth-of-type(2) div {
-	color: var(--color-text-black);
+	color: var(--color-text-two);
 	text-align: center;
 }
 
@@ -193,21 +194,26 @@ section:nth-of-type(2) section:nth-of-type(2) li:has(div:focus-within ) img {
 
 section:nth-of-type(2) section:nth-of-type(2) a:hover,
 section:nth-of-type(2) section:nth-of-type(2) a:focus-visible {
-	background-color: var(--color-background-white);
+	background-color: var(--color-background-two);
+    text-decoration: underline;
 }
 
 section:nth-of-type(2) button:focus-visible {
     outline-offset: .5em;
 }
 
-section:nth-of-type(2) button path:hover, 
-section:nth-of-type(2) button path:focus-visible {
-    fill: var(--color-text-lime);
+section:nth-of-type(2) button svg:hover {
+    transform: scale(1.1);
 }
 
-section:nth-of-type(2) button circle:hover, 
-section:nth-of-type(2) button circle:focus-visible {
-    stroke: var(--color-text-lime);
+section:nth-of-type(2) button svg:hover path, 
+section:nth-of-type(2) button svg:focus-visible path {
+    fill: var(--color-text-three);
+}
+
+section:nth-of-type(2) button svg:hover circle, 
+section:nth-of-type(2) button svg:focus-visible circle {
+    stroke: var(--color-text-three);
 }
 
 
@@ -219,7 +225,7 @@ section:nth-of-type(2) button circle:focus-visible {
 /* ---------- SECTION 3: BANNERS MET VIDEO'S ----------*/
 section:nth-of-type(3) {
     margin: 10em 0 1em 0;
-    border-top: 1px solid var(--color-text);
+    border-top: 1px solid var(--color-text-one);
 }
 
 section:nth-of-type(3) h2 {
@@ -248,8 +254,8 @@ section:nth-of-type(3) h3, section:nth-of-type(3) a {
 section:nth-of-type(3) a:hover,
 section:nth-of-type(3) a:focus-visible {
     background-color: var(--color-background);
-    color: var(--color-text);
-    scale: 1.1;
+    color: var(--color-text-one);
+    transform: scale(1.1);
 }
 
 section:nth-of-type(3) ul {
@@ -265,7 +271,7 @@ section:nth-of-type(3) h3 {
     font-family: 'Panama', serif;
     font-size: 5em;
     font-weight: 500;
-    color: var(--color-text-black);
+    color: var(--color-text-one);
     margin-top: 1em;
     position: absolute;
     z-index: 20;
@@ -284,6 +290,10 @@ section:nth-of-type(3) h3 + strong {
     animation: h3Train 45s linear infinite;
 }
 
+section:nth-of-type(3) li:nth-last-of-type(2) h3 {
+    color: var(--color-text-two);
+}
+
 @keyframes h3Train {
     0% {
         left: 0%;
@@ -299,15 +309,15 @@ section:nth-of-type(3) ul li {
 }
 
 section:nth-of-type(3) ul li:nth-of-type(1) {
-    background-color: var(--color-banner-pink);
+    background-color: var(--color-banner-one);
 }
 
 section:nth-of-type(3) ul li:nth-of-type(2) {
-    background-color: var(--color-banner-orange);
+    background-color: var(--color-banner-two);
 }
 
 section:nth-of-type(3) ul li:nth-of-type(3) {
-    background-color: var(--color-banner-pink);
+    background-color: var(--color-banner-one);
 }
 
 section:nth-of-type(3) video {
@@ -333,12 +343,12 @@ section:nth-of-type(3) a {
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    color: var(--color-text-black);
+    color: var(--color-text-two);
     font-size: 2em;
     font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
-    background-color: var(--color-background-white);
+    background-color: var(--color-background-two);
     padding: .05em .5em .05em .5em;
     border-radius: .25em;
     z-index: 20;
@@ -356,7 +366,7 @@ section:nth-of-type(4) section:nth-of-type(1) {
     gap: .4em;
     margin: .75em;
     padding-top: 2em;
-    border-bottom: 1px solid var(--color-text);
+    border-bottom: 1px solid var(--color-text-one);
 }
 
 section:nth-of-type(4) h2 {
@@ -379,11 +389,11 @@ section:nth-of-type(4) button svg {
 }
 
 section:nth-of-type(4) button path {
-    fill: var(--color-text);
+    fill: var(--color-text-one);
 }
 
 section:nth-of-type(4) button circle {
-    stroke: var(--color-text);
+    stroke: var(--color-text-one);
 }
 
 section:nth-of-type(4) ul {
@@ -410,7 +420,7 @@ section:nth-of-type(4) section:nth-of-type(2) {
 }
 
 section:nth-of-type(4) li p strong {
-    color: var(--color-text-lime);
+    color: var(--color-text-three);
 }
 
 section:nth-of-type(4) section:nth-of-type(2) li {
@@ -422,7 +432,7 @@ section:nth-of-type(4) section:nth-of-type(2) li {
         "link link";
     grid-template-columns: max-content 1fr;
 	gap: 1em;
-    border: 2.5px solid var(--color-background-white);
+    border: 2.5px solid var(--color-background-two);
     border-radius: 1.5em;
     margin-right: 1em;
 }
@@ -450,7 +460,7 @@ section:nth-of-type(4) section:nth-of-type(2) a {
 	display: block;
     transition: .5s;
     width: 15em;
-    color: var(--color-text);
+    color: var(--color-text-one);
     text-transform: uppercase;
     margin-bottom: 1em;
 }
@@ -465,18 +475,26 @@ section:nth-of-type(4) section:nth-of-type(2) li:has( :focus-visible ) {
 
 section:nth-of-type(4) section:nth-of-type(2) a:hover,
 section:nth-of-type(4) section:nth-of-type(2) a:focus-visible {
-	color: var(--color-text-lime);
+	color: var(--color-text-three);
+    transform: scale(1.05);
 }
 
-section:nth-of-type(4) button path:hover, 
-section:nth-of-type(4) button path:focus-visible {
-    fill: var(--color-text-lime);
+section:nth-of-type(4) button svg:hover {
+    transform: scale(1.1);
 }
 
-section:nth-of-type(4) button circle:hover, 
-section:nth-of-type(4) button circle:focus-visible {
-    stroke: var(--color-text-lime);
+section:nth-of-type(4) button svg:hover path, 
+section:nth-of-type(4) button svg:focus-visible path {
+    fill: var(--color-text-three);
 }
+
+section:nth-of-type(4) button svg:hover circle, 
+section:nth-of-type(4) button svg:focus-visible circle {
+    stroke: var(--color-text-three);
+}
+
+
+
 
 
 
@@ -498,7 +516,7 @@ section:nth-of-type(5) a {
     padding: 2em;
     width: 7.5em;
     height: 7.5em;
-    color: var(--color-text-black);
+    color: var(--color-text-one);
     border-radius: 50%;
     text-align: center;
     text-decoration: none;
@@ -507,15 +525,15 @@ section:nth-of-type(5) a {
 }
 
 section:nth-of-type(5) li:nth-of-type(1) a {
-    background-color: var(--color-wheel-grey);
+    background-color: var(--color-wheel-one);
 }
 
 section:nth-of-type(5) li:nth-of-type(2) a {
-    background-color: var(--color-wheel-white);
+    background-color: var(--color-wheel-two);
 }
 
 section:nth-of-type(5) li:nth-of-type(3) a {
-    background-color: var(--color-wheel-lime);
+    background-color: var(--color-wheel-three);
 }
 
 @keyframes rotate {
@@ -539,8 +557,8 @@ section:nth-of-type(5) a:hover {
 
 /* --------- SECTION 6: GET LATEST -------- */
 section:nth-of-type(6) {
-    background-color: var(--color-background-redorange);
-    color: var(--color-text-black);
+    background-color: var(--color-background-three);
+    color: var(--color-text-one);
     display: grid;
     grid-template-areas:
 		"h2 h2"
@@ -554,6 +572,7 @@ section:nth-of-type(6) h2 {
     grid-area: h2;
     font-size: 1.2em;
     font-weight: 400;
+    color: var(--color-text-one);
 }
 
 section:nth-of-type(6) form {
@@ -561,11 +580,11 @@ section:nth-of-type(6) form {
 }
 
 section:nth-of-type(6) input {
-    background-color: var(--color-background-white);
+    background-color: var(--color-background-five);
     border: none;
     border-radius: .25em;
     appearance: none;
-    caret-color: var(--color-background-redorange);
+    caret-color: var(--color-background-four);
     margin-right: 3em;
     margin-top: .5em;
     width: 100%;
@@ -577,31 +596,33 @@ section:nth-of-type(6) input::placeholder {
 }
 
 section:nth-of-type(6) input::selection {
-    color: var(--color-text);
-    background-color: var(--color-background-redorange);
+    color: var(--color-text-one);
+    background-color: var(--color-background-four);
 }
 
 section:nth-of-type(6) button {
     grid-area: button;
     align-self: center;
     appearance: none;
-    font-size: 1.25em;
+    font-size: 1.1em;
     text-transform: uppercase;
+    color: var(--color-text-one);
     border-radius: .5em;
-    border: 2px solid var(--color-text-black);
+    border: 2px solid var(--color-text-one);
     background-color: transparent;
-    width: 8em;
+    width: 7.25em;
     height: 2em;
 }
 
 section:nth-of-type(6) button:hover,
 section:nth-of-type(6) button:focus-visible {
-    color: var(--color-text);
-    background-color: var(--color-text-black);
-    scale: 1.1;
+    color: var(--color-text-two);
+    background-color: var(--color-text-one);
+    transform: scale(1.1);
     outline-offset: .5em;
     cursor: pointer;
 }
+
 
 
 

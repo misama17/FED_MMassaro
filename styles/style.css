@@ -3,8 +3,8 @@
 }
 
 
-/* ---------- ALGEMEEN ----------*/
-:root {
+/* ---------- COLORS ----------*/
+/* :root {
 	--color-text:#eee;
     --color-text-lime: #CDF851;
     --color-text-orange: #D98100;
@@ -22,40 +22,86 @@
     --color-wheel-pink: #FFA8BD;
 	--color-background-redorange: #FF4A23;
     --color-placeholder: #595959;
-}
+} */
 
-/* DARK EN LIGHT MODE! */
+/* DARK EN LIGHT MODE */
 /* :root {
-    color-scheme: light dark;
-	--color-text: light dark(#0F0E0E,#eee);
-    --color-text-lime: light dark(#396100,#CDF851);
-    --color-text-orange: light dark(#B30000, #D98100);
-    --color-text-black: light dark(#0F0E0E, #eee);
-	--color-background:light dark(#eee, #0F0E0E);
-    --color-background-white:light dark(#0F0E0E, #eee);
-	--color-transparant: rgba(252, 253, 248, 0.06275);
-	--color-banner-pink: light dark(#AD0028, #FFA8BD);
-	--color-banner-orange: light dark(#B30000, #D98100);
-	--color-banner-redorange: light dark(#A31E00, #FF4A23);
-	--color-hover-orange: light dark(#B30000, #D98100);
-	--color-wheel-grey: light dark(#5B5239, #B0A580);
-	--color-wheel-white: light dark(#0F0E0E, #FCFDF8);
-	--color-wheel-lime: light dark(#396100,#CDF851);
-	--color-background-redorange: light dark(#A31E00, #FF4A23);
+	--color-text: light-dark(#0F0E0E,#FCFDF8);
+    --color-text-lime: light-dark(#396100,#CDF851);
+    --color-text-orange: light-dark(#B30000, #D98100);
+    --color-text-black: light-dark(#0F0E0E, #FCFDF8);
+	--color-background:light-dark(#FCFDF8, #0F0E0E);
+    --color-background-white:light-dark(#0F0E0E, #FCFDF8);
+	--color-banner-pink: light-dark(#AD0028, #FFA8BD);
+	--color-banner-orange: light-dark(#B30000, #D98100);
+	--color-banner-redorange: light-dark(#A31E00, #FF4A23);
+	--color-hover-orange: light-dark(#B30000, #D98100);
+	--color-wheel-grey: light-dark(#5B5239, #B0A580);
+	--color-wheel-white: light-dark(#0F0E0E, #FCFDF8);
+	--color-wheel-lime: light-dark(#396100,#CDF851);
+    --color-wheel-pink: light-dark (#AD0028 ,#FFA8BD);
+	--color-background-redorange: light-dark(#A31E00, #FF4A23);
+    --color-placeholder: #595959;
+    --color-transparant: rgba(252, 253, 248, 0.06275);
 }
 
-html:has( [vlaue="light"]:checked ) {
+html:has( [value="light"]:checked ) {
     color-scheme: light;
 }
 
-html:has( [vlaue="dark"]:checked ) {
+html:has( [value="dark"]:checked ) {
     color-scheme: dark;
 } */
 
+@media (prefers-color-scheme:dark) {
+    :root {
+        --color-text-one:#FCFDF8;
+        --color-text-two: #0F0E0E;
+        --color-text-three: #CDF851;
+        --color-text-four: #D98100;
+        --color-background-one:#0F0E0E;
+        --color-background-two: #FCFDF8;
+        --color-background-three:#005F6B;
+        --color-background-four: #AD2000;
+        --color-background-five: #FCFDF8;
+        --color-transparant: rgba(252, 253, 248, 0.013);
+        --color-banner-one: #AD2000;
+        --color-banner-two: #D98100;
+        --color-hover: #D98100;
+        --color-wheel-one: #005F6B;
+        --color-wheel-two: #A30085;
+        --color-wheel-three: #AD2000;
+        --color-placeholder: #595959;
+    }
+}
+
+@media (prefers-color-scheme:light) {
+    :root {
+        --color-text-one:#0F0E0E;
+        --color-text-two: #FCFDF8;
+        --color-text-three: #005F6B;
+        --color-text-four: #AD2000;
+        --color-background-one:#FCFDF8;
+        --color-background-two: #0F0E0E;
+        --color-background-three: #F59300;
+        --color-background-four: #00B8F0;
+        --color-background-five: #FCFDF8;
+        --color-transparant: rgba(252, 253, 248, 0.06275);
+        --color-banner-one: #FFA8BD;
+        --color-banner-two: #D98100;
+        --color-hover: #AD2000;
+        --color-wheel-one: #FFA8BD;
+        --color-wheel-two: #f59300;
+        --color-wheel-three: #00B8F0;
+        --color-placeholder: #595959;
+        --color-text-input: #0F0E0E;
+    }
+}
 
 
 
 
+/* ---------- TYPOGRAFIE ---------- */
 @font-face {
     font-family: 'Romie Italic';
     src: url(../fonts/Romie-Italic.woff2);
@@ -81,13 +127,20 @@ html:has( [vlaue="dark"]:checked ) {
     src: url(../fonts/CompactaStd-Bold.woff2);
 }
 
+
+
+
+/* ---------- ALGMEEN ---------- */
 body {
-	background-color: var(--color-background);
-	color: var(--color-text);
+	background-color: var(--color-background-one);
+	color: var(--color-text-one);
 	font-family: 'Suisse BP regular', 'Helvetica Neue', 'Arial', sans-serif;
     
     margin: 0;
 }
+
+
+
 
 
 
@@ -103,11 +156,11 @@ header {
 	align-items: center;
     width: 100%;
     z-index: 100;
+    background-color: var(--color-background-one);
 }
 
 header a {
-	padding: 1em 0;
-	color: var(--color-text);
+	color: var(--color-text-one);
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 2.2em;
@@ -115,14 +168,13 @@ header a {
 
 header button {
     background-color: transparent;
-    color: var(--color-text);
+    color: var(--color-text-one);
     border: none;
 }
 
 nav {
 	order: 1;
 	display: grid;
-	gap: 2em;
 	align-content: start;
 	position: fixed;
 	z-index: 2;
@@ -131,37 +183,137 @@ nav {
 	transition: .3s;
 }
 
-nav button {
+nav > button {
 	position: relative;
 	z-index: 1;
   	align-self: start;
   	justify-self: end;
 	margin: 2em;
     background-color: transparent;
-    color: var(--color-text);
+    color: var(--color-text-one);
     border: none;
 }
 
-nav ul { 
+nav ul:nth-of-type(1) { 
 	list-style-type: none;
-	line-height: 5em;
+	line-height: 7em;
+    padding: 0;
+    margin: 0;
 }
 
 nav.showMenu {
 	translate: 0% 0%;
-	background-color: var(--color-background);
+	background-color: var(--color-background-one);
 }
   
-nav li {
+nav ul:nth-of-type(1) li {
 	flex-basis: 100vw;
 	font-size: 2em;
+    border-top: 2px solid var(--color-text-one);
+    padding: 0 1em;
 }
 
-/* CHATGPT: hoe maak ik een outline van de */
-nav li a:hover {
+/* !! CHATGPT: hoe maak ik een outline van de */
+nav ul:nth-of-type(1) li a:hover {
     color: var(--color-transparant);
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 3px var(--color-text-one);
 }
+
+header a svg path {
+    fill: var(--color-text-one);
+}
+
+
+header section {
+    background-color: var(--color-background-one);
+    color: var(--color-text-one);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+	gap: 2em;
+    padding: 2em 1em;
+}
+
+header section form {
+    align-self: end;
+}
+
+header section input {
+    background-color: var(--color-background-five);
+    border: 2px solid var(--color-background-two);
+    border-radius: .25em;
+    appearance: none;
+    caret-color: var(--color-background-four);
+    margin-right: 3em;
+    margin-top: .5em;
+    width: 100%;
+    max-width: 25em;
+}
+
+header section input::placeholder {
+    color: var(--color-placeholder);
+}
+
+header section input::selection {
+    color: var(--color-text-one);
+    background-color: var(--color-background-four);
+}
+
+header section button {
+    align-self: end;
+    appearance: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: var(--color-text-one);
+    border-radius: .5em;
+    border: 2px solid var(--color-text-one);
+    background-color: transparent;
+    width: 7em;
+    height: 2em;
+}
+
+header section > button:hover,
+header section > button:focus-visible {
+    color: var(--color-text-two);
+    background-color: var(--color-text-one);
+    scale: 1.1;
+    outline-offset: .5em;
+    cursor: pointer;
+}
+
+header ul:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 1em;
+    padding: 0;
+    gap: 0 1.25em;
+}
+
+header ul:nth-of-type(2) li {
+    list-style-type: none;
+    width: 45%;
+}
+
+header ul:nth-of-type(2) a {
+    font-size: 1.5em;
+    color: var(--color-text-one);
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 2em;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+header ul:nth-of-type(2) li a:hover,
+header ul:nth-of-type(2) li a:focus-visible {
+    color: var(--color-text-three);
+    outline-offset: .5em;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+
+
+
 
 
 
@@ -170,8 +322,9 @@ nav li a:hover {
 footer section:nth-of-type(1) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: flex-start;
+    gap: 5em;
+    margin: 0 2em;
 } 
 
 footer ul {
@@ -184,17 +337,17 @@ footer section:nth-of-type(1) > ul {
 }
 
 footer section:nth-of-type(1) li > a {
-    color: var(--color-text);
+    color: var(--color-text-one);
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 1.25em;
     line-height: 1.5em;
     display: inline-block;
     transition: transform 0.3s ease;
 }
 
-footer a > img {
-    width: 90%;
+footer a > svg {
+    width: 90vw;
     margin: 1em;
 }
 
@@ -202,10 +355,11 @@ footer section:nth-of-type(2) {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    margin-bottom: 3em;
 }
 
 footer section:nth-of-type(2) li > a {
-    color: var(--color-text);
+    color: var(--color-text-one);
     text-transform: capitalize;
     text-decoration: none;
     line-height: 2em;
@@ -213,17 +367,20 @@ footer section:nth-of-type(2) li > a {
     transition: transform 0.3s ease;
 }
 
-
+footer a svg path {
+    fill: var(--color-text-one);
+}
 
 
 /* ---------- HOVER: FOOTER --------- */
 footer ul li a:hover,
 footer ul li a:focus-visible {
-    color: var(--color-text-lime);
+    color: var(--color-text-three);
     outline-offset: .5em;
     transform: scale(1.1);
+    text-decoration: underline;
 }
 
-footer a > img:hover {
-    fill: var(--color-text-lime);
+footer svg:hover path {
+    fill: var(--color-text-three);
 }

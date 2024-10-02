@@ -10,7 +10,7 @@
 	
     <link href="styles/style.css" rel="stylesheet">
     <link href="styles/about.css" rel="stylesheet">
-	<script defer src="scripts/script.js"></script>
+	<script defer src="scripts/scriptabout.js"></script>
 
 	<title>RCA Records</title>
 </head>
@@ -18,8 +18,12 @@
 <body>
     <!-- HEADER -->
     <header>
-        <a href="index.html">
-			<img src="./images/rca-logo.svg" alt="go home"/>
+        <a href="index.html" aria-label="Logo of RCA Records">
+			<svg width="111" height="33" viewBox="0 0 111 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M111 1.02051V32.1503H96.8878V5.88269H93.3894V18.3346L87.5192 32.1503H72.5176L86.9855 1.02051H111Z" fill="#FCFDF8"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M31.6635 18.3346L38.5417 32.1503H23.8958L17.492 18.3346V5.88269H13.9936V32.1503H0V1.02051H24.1923H25.8526C30.4776 1.02051 34.2131 4.75608 34.2131 9.38108C34.2131 9.38108 34.2131 10.8042 34.2131 12.4644C34.1538 14.9548 32.9086 17.208 31.6635 18.3346Z" fill="#FCFDF8"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M38.542 24.264C38.542 28.9483 42.3369 32.7432 47.0212 32.7432H63.9795C68.6638 32.7432 72.5179 28.889 72.5179 24.2048V18.3346H57.2792V27.4067H53.7808V5.88265H57.2792V14.7176H72.5179V8.96598C72.5179 4.28169 68.7231 0.486816 64.0388 0.486816H47.0212C42.3369 0.486816 38.542 4.28169 38.542 8.96598V24.264Z" fill="#FCFDF8"/>
+            </svg>
 		</a>
 		<button aria-hidden="true">Menu</button>
 		<nav>
@@ -40,8 +44,10 @@
 
         <div id="invertedcursor"></div>
 
+        <!-- <h1>About Rca Records</h1> -->
+
         <section>
-            <h1>Defy labels.</h1>
+            <h2>Defy labels.</h2>
             <img src="./images/victoriamonet_sos.jpg" alt="">
             <img src="./images/beckyg_comodiablos.jpg" alt="">
         </section>
@@ -78,58 +84,20 @@
         <section>
             <h2>Rca impact</h2>
             <p>As a cultural trailblazer, RCA has a responsibility to lead – from mentorship programs to workshops, our various initiatives serve to foster community, while nurturing and empowering generations of leaders.</p>
-            <button>
-                <img src="./images/arrow_left.svg" alt="previous single">
+            <button aria-label="previous single">
+                <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.3446 25.7478L26.1504 35.8795C26.241 35.9567 26.3566 36 26.4785 36L29.244 36C29.4753 36 29.5815 35.7157 29.4065 35.5674L18.4632 26.1742L36.75 26.1742C36.8875 26.1742 37 26.0629 37 25.927L37 24.073C37 23.9371 36.8875 23.8258 36.75 23.8258L18.4663 23.8258L29.4096 14.4326C29.5846 14.2812 29.4784 14 29.2472 14L26.3879 14C26.3285 14 26.2691 14.0216 26.2254 14.0618L14.3446 24.2522C14.2364 24.3453 14.1496 24.4601 14.0902 24.5891C14.0308 24.7181 14 24.8582 14 25C14 25.1418 14.0308 25.2819 14.0902 25.4109C14.1496 25.5398 14.2364 25.6547 14.3446 25.7478Z"/>
+                    <circle cx="25.5" cy="25.5" r="24.5" transform="rotate(-180 25.5 25.5)"  stroke-width="2"/>
+                </svg>
             </button>
             <button aria-label="next single">
-                <img src="./images/arrow_right.svg" alt="next single">
+                <svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M36.6554 25.2522L24.8496 15.1205C24.759 15.0433 24.6434 15 24.5215 15H21.756C21.5247 15 21.4185 15.2843 21.5935 15.4326L32.5368 24.8258H14.25C14.1125 24.8258 14 24.9371 14 25.073V26.927C14 27.0629 14.1125 27.1742 14.25 27.1742H32.5337L21.5904 36.5674C21.4154 36.7188 21.5216 37 21.7529 37H24.6121C24.6715 37 24.7309 36.9784 24.7746 36.9382L36.6554 26.7478C36.7636 26.6547 36.8504 26.5399 36.9098 26.4109C36.9692 26.2819 37 26.1418 37 26C37 25.8582 36.9692 25.7181 36.9098 25.5891C36.8504 25.4601 36.7636 25.3453 36.6554 25.2522Z" fill="black"/>
+                    <circle cx="25.5" cy="25.5" r="24.5" stroke="#0F0E0E" stroke-width="2"/>
+                </svg>
             </button>
             <a href="#">Instagram</a>
             <img src="./images/victoriamonet_sos.jpg" alt="">
-        </section>
-
-        <!-- <section>
-            <section>
-                <h2>Curated by Rca</h2>
-                <button>
-                    <img src="./images/arrow_left.svg" alt="previous single">
-                </button>
-                <button aria-label="next single">
-                    <img src="./images/arrow_right.svg" alt="next single">
-                </button>
-            </section>
-            <section>
-                <ul>
-                    <li>
-                        <p><strong>Article</strong></p> 
-                        <p>The real A$AP Rocky</p>
-                        <a href="#">Billboard</a>
-                        <img src="./images/beckyg_comodiablos.jpg" alt="Portretfoto van de artiest A$AP Rocky">
-                    </li>
-                    <li>
-                        <p><strong>Article</strong></p> 
-                        <p>Blackpink's LISA is ready to be unleashed</p>
-                        <a href="#">Elle us</a>
-                        <img src="./images/foushee_bux.jpg" alt="Foto van artiest LISA">
-                    </li>
-                    <li>
-                        <p><strong>Article</strong></p>
-                        <p>The real A$AP Rocky</p>
-                        <a href="#">Billboard</a>
-                        <img src="./images/beckyg_comodiablos.jpg" alt="Portretfoto van de artiest A$AP Rocky">
-                    </li>
-                    <li>
-                        <p><strong>Article</strong></p> 
-                        <p>Blackpink's LISA is ready to be unleashed</p>
-                        <a href="#">Elle us</a>
-                        <img src="./images/foushee_bux.jpg" alt="Foto van artiest LISA">
-                    </li>
-                </ul>
-            </section>
-        </section> -->
-
-        <section>
-            <p>filler</p>
         </section>
 
         <section>
@@ -195,8 +163,12 @@
                 </li>
             </ul>
         </section>
-        <a href="index.html">
-            <img src="./images/rca-logo.svg" alt="Logo of RCA Records.">
+        <a href="index.html" aria-label="Logo of RCA Records">
+            <svg viewBox="0 0 111 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M111 1.02051V32.1503H96.8878V5.88269H93.3894V18.3346L87.5192 32.1503H72.5176L86.9855 1.02051H111Z" fill="#FCFDF8"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M31.6635 18.3346L38.5417 32.1503H23.8958L17.492 18.3346V5.88269H13.9936V32.1503H0V1.02051H24.1923H25.8526C30.4776 1.02051 34.2131 4.75608 34.2131 9.38108C34.2131 9.38108 34.2131 10.8042 34.2131 12.4644C34.1538 14.9548 32.9086 17.208 31.6635 18.3346Z" fill="#FCFDF8"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M38.542 24.264C38.542 28.9483 42.3369 32.7432 47.0212 32.7432H63.9795C68.6638 32.7432 72.5179 28.889 72.5179 24.2048V18.3346H57.2792V27.4067H53.7808V5.88265H57.2792V14.7176H72.5179V8.96598C72.5179 4.28169 68.7231 0.486816 64.0388 0.486816H47.0212C42.3369 0.486816 38.542 4.28169 38.542 8.96598V24.264Z" fill="#FCFDF8"/>
+            </svg>
         </a>
         <section>
             <ul>
