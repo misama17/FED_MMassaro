@@ -27,6 +27,7 @@ h1 + img {
 
 
 
+
 /* ----------- SECTION 2: CAROUSEL -------- */
 section:nth-of-type(2) section:nth-of-type(1) {
     display: flex;
@@ -222,6 +223,7 @@ section:nth-of-type(2) button svg:focus-visible circle {
 
 
 
+
 /* ---------- SECTION 3: BANNERS MET VIDEO'S ----------*/
 section:nth-of-type(3) {
     margin: 10em 0 1em 0;
@@ -382,6 +384,7 @@ section:nth-of-type(4) button {
     border-radius: 50%;
     border: none;
     background-color: transparent;
+    appearance: none;
 }
 
 section:nth-of-type(4) button svg {
@@ -477,6 +480,7 @@ section:nth-of-type(4) section:nth-of-type(2) a:hover,
 section:nth-of-type(4) section:nth-of-type(2) a:focus-visible {
 	color: var(--color-text-three);
     transform: scale(1.05);
+    transform-origin: center;
 }
 
 section:nth-of-type(4) button svg:hover {
@@ -514,8 +518,8 @@ section:nth-of-type(5) a {
     justify-content: center;
     align-items: center;
     padding: 2em;
-    width: 7.5em;
-    height: 7.5em;
+    width: 6.5em;
+    height: 6.5em;
     color: var(--color-text-one);
     border-radius: 50%;
     text-align: center;
@@ -612,6 +616,7 @@ section:nth-of-type(6) button {
     background-color: transparent;
     width: 7.25em;
     height: 2em;
+    transition: transform 0.3s ease;
 }
 
 section:nth-of-type(6) button:hover,
