@@ -205,6 +205,7 @@ Specifieke vragen:
   - Hoe zorg ik ervoor dat ik een h1 heb die wel voorgelezen wordt met de screenreader, maar niet te zien is op de pagina? (bij mijn tweede pagina heb ik nu een h1 die eigenlijk niet de pagina omschrijft en dus ook niet goed is als h1)
   - De darkmode is me niet gelukt om uit te werken. Ik heb wel alle kleuralternatieven toegevoegd, maar een deel wordt niet opgepakt.
   - Hoe werkt before en after precies? wat doet het?
+  - Hoe verwijs ik correct naar ChatGPT? 
 
 
   ### Verslag van meeting
