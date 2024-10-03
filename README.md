@@ -175,6 +175,17 @@ Specifieke vragen:
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
+  <img src="readme-images/checklist_1" width="375px" alt="WCAG Checklist">
+  <img src="readme-images/checklist_2" width="375px" alt="WCAG Checklist">
+  <img src="readme-images/checklist_3" width="375px" alt="WCAG Checklist">
+  <img src="readme-images/checklist_4" width="375px" alt="WCAG Checklist">
+  <img src="readme-images/checklist_5" width="375px" alt="WCAG Checklist">
+
+  Niet alle buttons alt of aria-label
+  links werken goed en navigatie ook
+  Duidelijkere omschrijving van links of buttons
+  Niet alle sections heading
+  
 </details>
 
 
@@ -188,7 +199,8 @@ Specifieke vragen:
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Ik ben heel erg opgeschoten met de tweede pagina. Ik heb het grid nu onder controle, waardoor ik de pagina vrij snel kon maken!
+  
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -210,7 +222,8 @@ Specifieke vragen:
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
-
+  - ik ben goed op weg met mijn pagina's. Laatste lootjes.
+  - Visually hidden class toevoegen mag!!
 
 </details>
 
@@ -224,19 +237,28 @@ Specifieke vragen:
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-
+  <img src="readme-images/ss1" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/ss2" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/ss3" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/ss4" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/ss5" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/ss6" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/ss7" width="375px" alt="uitomst opdracht 1">
+  
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  De carousel is goed gelukt.
+  <img src="readme-images/carousel" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Tweede pagina is niet helemaal responsive zoals ik hoopte...
+  <img src="readme-images/responsive" width="375px" alt="uitomst opdracht 1">
+
 </details>
 
 
@@ -252,8 +274,11 @@ Specifieke vragen:
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. https://chatgpt.com/c/66e98f5d-d818-8009-adc4-ed7e2111562a
+  2. https://www.w3schools.com/jsref/met_video_pause.asp#:~:text=The%20pause()%20method%20halts,%2C%20attached%20on%20the%20video).
+  3. https://codepen.io/shooft/pen/VwJXNEg
+  4. https://codepen.io/misama17/pen/ExBGXRb?editors=1100
+
+En een aantal dingen met behulp van de docent. Dit staat boven alle elementen uitgecommmend!
 
 </details>
