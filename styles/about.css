@@ -214,7 +214,7 @@ section:nth-of-type(3) a:focus-visible {
 section:nth-of-type(4) {
     background-color: var(--color-banner-orange);
     display: grid;
-    grid-template-rows: 1fr 22em 10em 5em 10em;
+    grid-template-rows: 1fr 25em 10em 5em 10em;
 }
 
 section:nth-of-type(4) h2 {
@@ -241,6 +241,7 @@ section:nth-of-type(4) blockquote {
 section:nth-of-type(4) img {
     grid-row: 2;
     margin: 0 .5em;
+    width: 20em;
 }
 
 
@@ -274,6 +275,7 @@ section:nth-of-type(5) > img {
     grid-row: 1;
     grid-column: 1/-1;
     padding: 2em 1em;
+    width: 95vw;
 }
 
 section:nth-of-type(5) a {
@@ -582,6 +584,7 @@ section:nth-of-type(8) button:focus-visible {
         grid-column: 1;
         grid-row: 2/6;
         object-fit: cover;
+        width: 100%;
     }
 
     section:nth-of-type(4) h2,
@@ -626,6 +629,7 @@ section:nth-of-type(8) button:focus-visible {
         grid-column: 2;
         grid-row: 1/-1;
         object-fit: cover;
+        width: 100%;
     }
 
     /* SECTION 7 */
@@ -660,7 +664,7 @@ section:nth-of-type(8) button:focus-visible {
 
     /* SECTION 4 */
     section:nth-of-type(4) {
-        height: 85vh;
+        height: 95vh;
         grid-template-rows: 10em 10em 5em 5em;
     }
 
@@ -670,6 +674,12 @@ section:nth-of-type(8) button:focus-visible {
 
     section:nth-of-type(4) img {
         margin: 2em 1em;
+        width: 80%;
+    }
+
+    /* SECTION 5 */
+    section:nth-of-type(5) img {
+        height: 80%;
     }
 
     /* SECTION 7 */
