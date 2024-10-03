@@ -137,7 +137,7 @@ function previousSlide2() {
 
 
 // ---------- VIDEOS ----------
-// BROND: https://www.w3schools.com/jsref/met_video_pause.asp#:~:text=The%20pause()%20method%20halts,%2C%20attached%20on%20the%20video).
+// BRON: https://www.w3schools.com/jsref/met_video_pause.asp#:~:text=The%20pause()%20method%20halts,%2C%20attached%20on%20the%20video).
 // Video 1
 function playVideo1() {
     vid1.play();
