@@ -276,6 +276,7 @@ Specifieke vragen:
   2. https://www.w3schools.com/jsref/met_video_pause.asp#:~:text=The%20pause()%20method%20halts,%2C%20attached%20on%20the%20video).
   3. https://codepen.io/shooft/pen/VwJXNEg
   4. https://codepen.io/misama17/pen/ExBGXRb?editors=1100
+  5. https://www.a11yproject.com/posts/how-to-hide-content/
 
 En een aantal dingen met behulp van de docent. Dit staat boven alle elementen uitgecommmend!
 
