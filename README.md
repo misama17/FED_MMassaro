@@ -32,8 +32,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Je website
 
-!!! WANNEER IK MIJN ORIGIN WIL PUSHEN OP GITHUB KRIJG IK EEN ERROR: your remote is disconnected. Check your internetconnection and try again. HIERDOOR KUNNEN DE AFBEELDINGEN IN DE README OOK NIET GEZIEN WORDEN...!!!
-
 <details open>
   <summary>uitwerken voor kick-off werkgroep</summary>
 
